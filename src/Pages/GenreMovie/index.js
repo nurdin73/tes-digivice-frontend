@@ -63,63 +63,13 @@ class GenreMovie extends Component {
         items: 1
       }
     };
-
-		// const {search} = this.props.searchData
-		// const {valueSearch} = this.props.search
-		// const {genreMovie} = this.props.listMovie
-		// const {genre} = this.props.genre
-		const {search, valueSearch, genreMovie, genre, isLoading} = this.props.movie
+		const {genreMovie, genre, isLoading} = this.props.movie
 
 		if(isLoading === true) {
       return <div className="no-result"><Typography variant="h6" className="fw-bold text-white" component="p">Is Loading....</Typography></div>
     }
 
-		if(valueSearch) {
-			return( 
-				<div>
-					<Banner />
-					<Container maxWidth="md">
-						<div className="bg-title">
-							<Typography
-								variant="h5"
-								component="p"
-								className="fw-bold text-white"
-							>
-								Search Result : {valueSearch}
-							</Typography>
-						</div>
-						{search.status === false ? <div className="no-result"><Typography variant="h6" className="fw-bold text-white" component="p">{search.message}</Typography></div> : 
-							<Carousel
-								responsive={responsive}
-								additionalTransfrom={0}
-								arrows
-								centerMode={false}
-								className="card-carousel"
-								containerClass="container"
-								dotListClass=""
-								draggable
-								focusOnSelect={false}
-								infinite={false}
-								itemClass=""
-								keyBoardControl
-								minimumTouchDrag={80}
-								renderButtonGroupOutside={false}
-								renderDotsOutside={false}
-								ssr={true}
-								
-							>
-								{search.map((result, i) => {
-									return (
-											<CardList key={i} poster={result.poster} id={result.id} overview={result.overview} title={result.title} releasedDate={formatDate(result.dateReleased)} rating={result.rating} />
-									)
-								})}
-							</Carousel>
-						}
-					</Container>
-				</div>
-			)
-		} else {
-
+		
       return (
         <div>
           <Banner/>
@@ -163,7 +113,6 @@ class GenreMovie extends Component {
           </Container>
         </div>
       );
-    } 
   }
 }
 

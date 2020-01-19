@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SearchOutlined } from '@material-ui/icons'
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Header.css'
 import { Container } from '@material-ui/core';
 import { connect } from 'react-redux';
@@ -24,6 +24,7 @@ class Header extends Component {
   onKeyup = (e) => {
     if(e.keyCode === 13) {
       this.onSubmit()
+      window.location.href = `/search/${this.state.search}`
     }
   }
 
@@ -54,7 +55,7 @@ class Header extends Component {
             <div className="d-flex">
               <Link to="/" className="navbar-brand">Lux</Link>
               <div className="search">
-                <input type="text" name="search" value={this.state.search} onKeyUp={this.onKeyup} onChange={this.onSearch} className="form-search" placeholder="Type to search.." />
+                <input type="text" name="search" value={this.props.match.params.title} onKeyUp={this.onKeyup} onChange={this.onSearch} className="form-search" placeholder="Type to search.." />
                 <button className="btn-search"><SearchOutlined fontSize="large" style={{color:'#fff'}} /></button>
               </div>
             </div>
@@ -80,7 +81,7 @@ class Header extends Component {
 }
 const mapStateToProps = (state, ownProps) => {
   return {
-    search: state.search
+    movie: state.Movie
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
@@ -94,4 +95,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Header));
