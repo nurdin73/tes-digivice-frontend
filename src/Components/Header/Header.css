@@ -43,7 +43,7 @@
     list-style: none;
 }
 .list-item li {
-    padding: 0 10px;
+    margin: 0 10px;
 }
 .list-item li a {
     text-decoration: none;
@@ -51,7 +51,7 @@
     font-weight: bold;
     color: #ffffff;
 }
-.list-item li a:hover, .list-item li .active {
+.list:hover, .active {
     border-bottom: 2px solid #ffc800;
 }
 

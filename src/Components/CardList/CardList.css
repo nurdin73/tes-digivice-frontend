@@ -82,6 +82,9 @@
 .text-white {
   color: #fff !important;
 }
+.text-yellow {
+  color: #ffc800 !important;
+}
 .text-dark {
   color: #000 !important;
 }

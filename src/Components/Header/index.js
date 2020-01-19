@@ -27,6 +27,25 @@ class Header extends Component {
     }
   }
 
+  componentDidMount() {
+    const track = document.querySelector('.list__item');
+    console.log(track)
+
+    const updateDot = (currentActive, targetActive) => {
+      currentActive.classList.remove('active')
+      targetActive.classList.add('active')
+    }
+    
+    track.addEventListener('click', e => {
+      const targetList = e.target.closest('li')
+      if(!targetList) return;
+      const currentList = track.querySelector('.active')
+      console.log(targetList)
+      updateDot(currentList, targetList)
+    })
+    
+  }
+
   render() {
     return (
       <div>
@@ -40,18 +59,18 @@ class Header extends Component {
               </div>
             </div>
             <div className="nav-link d-flex">
-              <ul className="list-item d-flex">
-                <li>
-                  <Link to="/" className="active">Home</Link>
+              <ul className="list-item d-flex list__item">
+                <li className="list active">
+                  <Link to="/">Home</Link>
                 </li>
-                <li>
+                <li className="list">
                   <Link to="/movie">Movie</Link>
                 </li>
                 {/* <li>
                   <Link to="/tv-show">TV Show</Link>
                 </li> */}
               </ul>
-              {/* <button className="btn-login">Login</button> */}
+              {/* <button className="btn-login">Login</button> */} 
             </div>
           </Container>
         </nav>
