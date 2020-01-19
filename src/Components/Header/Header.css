@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 600px) {
     .form-search {
-        width: 170px;
+        width: 125px;
         padding: 5px 10px;
         font-size: 12px;
     }
