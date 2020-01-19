@@ -39,7 +39,12 @@
 
 @media screen and (max-width: 600px) {
     .form-search {
-        width: 180px;
+        width: 170px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .btn-search {
+        display: none;
     }
     .navbar-brand {
         margin-right: 15px;
