@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #000000;
+    z-index: 999;
+    width: 100%;
+}
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.navbar-brand {
+    color: #ffc800;
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    margin-top: 4px;
+    margin-right: 80px;
+    text-decoration: none;
+}
+.search {
+    position: relative;
+    margin-top: 0px;
+}
+.form-search {
+    width: 450px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 70px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    outline: none;
+    font-family: 'Poppins';
+}
+.form-search:focus {
+    background-color: rgba(0, 0, 0, .3);
+}
+.list-item {
+    list-style: none;
+}
+.list-item li {
+    padding: 0 10px;
+}
+.list-item li a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-weight: bold;
+    color: #ffffff;
+}
+.list-item li a:hover, .list-item li .active {
+    border-bottom: 2px solid #ffc800;
+}
+
+.btn-search {
+    background: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 13px;
+}
+.btn-login {
+    background: none;
+    outline: none;
+    border: 2px solid #ffc800;
+    padding: 2px 15px;
+    font-size: 20px;
+    border-radius: 50px;
+    color: #ffffff;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+    font-family: 'Poppins';
+}
+.btn-login:hover {
+    background-color: #ffc800;
+    color: #000;
+}

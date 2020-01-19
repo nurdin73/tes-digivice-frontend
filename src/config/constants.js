@@ -1,0 +1,8 @@
+export const GET_MOVIE_PLAYING = "GET_MOVIE_PLAYING"
+export const GET_MOVIE_TRENDING = "GET_MOVIE_TRENDING"
+export const GET_MOVIE_BY_TITLE = "GET_MOVIE_BY_TITLE"
+export const GET_MOVIE_BY_ID = "GET_MOVIE_BY_ID"
+export const GET_MOVIE_BY__GENRE = "GET_MOVIE_BY__GENRE"
+export const GET_GENRE_BY_ID = "GET_GENRE_BY_ID"
+export const GET_MOVIES = "GET_MOVIES"
+export const SEARCH = "SEARCH"

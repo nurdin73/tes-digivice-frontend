@@ -1,0 +1,27 @@
+.fw-bold {
+    font-weight: bold;
+}
+.text-white {
+    color: #fff;
+}
+.bg-title {
+    background-color: #131313;
+    border-left: 4px solid #ffc800;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+}
+.list-movie {
+    background-color: #ffc800;
+    height: 300px;
+    position: relative;
+}
+.no-result {
+    background-color: #131313;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-image: url('http://host.trivialbeing.org/up/tdk-jun5-bannerbatmanexclusivo2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
