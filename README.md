@@ -69,7 +69,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ## Screenshot
 
+### Screen Home
 ![Alt text](/screenshot/screen-home.png?raw=true "Screen Home")
+
+### Screen Detail
 ![Alt text](/screenshot/screen-detail.png?raw=true "Screen Detail")
+
+### Screen genre movie list
 ![Alt text](/screenshot/screen-genre-movies.png?raw=true "Screen Genre Movie")
+
+### Screen Search Result
 ![Alt text](/screenshot/screen-search.png?raw=true "Screen Search")
