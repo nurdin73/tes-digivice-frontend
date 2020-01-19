@@ -61,12 +61,12 @@ class DetailMovie extends Component {
               </Typography>
           </div>
               <Grid container spacing={4}>
-                  <Grid item xs={5}>
+                  <Grid item md={5}>
                     <div className="bg-poster">
                           <img src={detailMovie.poster} className="poster" alt={detailMovie.title} />
                     </div>
                   </Grid>
-                  <Grid item xs={7} className="p-2">
+                  <Grid item md={7} className="p-2">
                       <Typography variant="h4" component="p" className="fw-bold text-white m-2">{detailMovie.title}({getYear(detailMovie.dateReleased)})</Typography>
                       <Typography variant="subtitle2" component="p" className="fw-bold text-white">Released Date : {formatDate(detailMovie.dateReleased)}</Typography>
                       <div className="display-flex">
