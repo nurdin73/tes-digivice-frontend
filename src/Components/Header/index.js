@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SearchOutlined } from '@material-ui/icons'
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 import './Header.css'
 import { Container } from '@material-ui/core';
 import { connect } from 'react-redux';
@@ -10,7 +10,8 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-       search: ""
+       search: "",
+       redirect: false
     }
   }
   
@@ -24,7 +25,7 @@ class Header extends Component {
   onKeyup = (e) => {
     if(e.keyCode === 13) {
       this.onSubmit()
-      window.location.href = `/search/${this.state.search}`
+      this.setState({redirect: true})
     }
   }
 
@@ -48,6 +49,14 @@ class Header extends Component {
   }
 
   render() {
+
+    if(this.state.redirect) {
+      this.setState({redirect: false})
+      return (
+        <Redirect to={{pathname: `/search/${this.state.search}`}} />
+      )
+    }
+
     return (
       <div>
         <nav className="navbar">
