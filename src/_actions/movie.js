@@ -2,29 +2,12 @@ import {GET_MOVIE_PLAYING, GET_MOVIE_TRENDING, GET_MOVIE_BY_TITLE, SEARCH, GET_M
 
 import axios from 'axios'
 
-const date = new Date();
-let bln = date.getMonth() + 1;
-if (bln < 10) {
-  bln = "0" + bln;
-} else {
-  // eslint-disable-next-line no-self-assign
-  bln = bln;
-}
-let hari = date.getDate();
-if (hari < 10) {
-  hari = "0" + hari;
-} else {
-  // eslint-disable-next-line no-self-assign
-  hari = hari;
-}
-let tgl = date.getFullYear() + "-" + bln + "-" + hari;
-
 export const getMovieReleased = () => {
     return {
         type: GET_MOVIE_PLAYING,
         payload: axios({
             method: 'get',
-            url: `https://movie-triller.herokuapp.com/api/v1/released?date=${tgl}`
+            url: `https://movie-triller.herokuapp.com/api/v1/released`
         })
     }
 }
